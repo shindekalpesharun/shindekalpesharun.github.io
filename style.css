@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap");
+@font-face {
+  font-family: "mono";
+  src: url("./fonts/roboto-mono-700.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mono-regular";
+  src: url("./fonts/roboto-mono-regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #fafafa;
+  --text-color: black;
+}
+
+.dark-mode {
+  --background-color: #1d1f20;
+  --text-color: #ededed;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color); /* font-family: "mono-regular", monospace; */
+  font-family: "mono-regular", monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.title {
+  font-size: 2rem;
+}
+
+.profile-details > .name {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.profile-details > .description {
+  font-size: 2rem;
+}
+
+#btn_dark_mode {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+#btn_dark_mode:hover {
+  cursor: pointer;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.container {
+  width: 80vw;
+  align-self: center;
+}
+
+.introduction {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  padding: 1rem 0;
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.say-hello {
+  background: var(--text-color);
+  color: var(--background-color);
+  padding: 0.8rem 2rem;
+  border-radius: 4rem;
+  transition: transform 0.3s ease;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile > img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn-resume {
+  margin-top: 2rem;
+  border-radius: 4rem;
+  border: #1d1f20 1px solid;
+  padding: 0.6rem 2rem;
+  box-shadow: 0px 0.4rem 0.4rem rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+.btn-resume:hover {
+  transform: scale(1.1);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-media {
+  padding: 0 2rem;
+}
+
+.social-media > a {
+  padding: 0 1rem;
+}
+.social-media i {
+  font-size: 2rem;
+}
+
+.find-me-on {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 0;
+}
+.line {
+  flex: 1; /* Take up remaining space */
+  border: none; /* Remove default border */
+  border-top: 1px solid var(--text-color); /* Add top border */
+  margin: auto; /* Center the line horizontally */
+}
+
+.bordered-table {
+  border-collapse: collapse; /* Collapse table borders */
+  width: 100%;
+}
+
+.bordered-table td,
+.bordered-table th {
+  border: 1px solid var(--text-color); /* Add border to cells */
+  padding: 8px; /* Add padding for better appearance */
+}
+
+.about-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.about-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.about-me > .title,
+.technologies > .title,
+.projects > .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.skills {
+  display: grid;
+  grid-gap: 10px;
+  /* TODO: make responsive */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.item > img {
+  width: 6rem;
+  height: 6rem;
+  border: var(--text-color) 2px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+section {
+  margin-top: 4rem;
+}
+
+.box {
+  position: relative;
+}
+.project-image {
+  width: 100%;
+  height: 300px;
+  /* background-position: ; */
+  object-fit: fill;
+}
+
+td > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-screenshot > img {
+  object-fit: contain;
+}
+.project-screenshot-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.project-screenshot-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+footer > .footer-rocket {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  /* body {
+    background-color: lightgreen;
+  } */
+
+  .container {
+    width: 90vw;
+    align-self: center;
+  }
+  .profile-details > .name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .profile-details > .description {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  #btn_dark_mode {
+    padding: 0.4rem;
+  }
+  .say-hello {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .profile > img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .skills {
+    display: grid;
+    grid-gap: 10px;
+    /* TODO: make responsive */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .social-media {
+    padding: 0.4rem;
+  }
+
+  .social-media > a {
+    padding: 0 0.4rem;
+  }
+  .social-media i {
+    font-size: 1.4rem;
+  }
+  .project-screenshot > img {
+    height: 8rem;
+  }
+  .project-screenshot-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .about-profile {
+    gap: 0.4rem;
+    margin: 0;
+  }
+  footer {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+  }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* body {
+    background-color: lightcoral;
+  } */
+  .profile-details > .name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .profile-details > .description {
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  #btn_dark_mode {
+    padding: 0.6rem;
+  }
+  .say-hello {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 901px) {
+  /* body {
+    background-color: lightskyblue;
+  } */
+}
