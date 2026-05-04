@@ -3,312 +3,399 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalpesh Shinde | Mobile Lead & Full-Stack Engineer</title>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Portfolio of Kalpesh Shinde, a Mobile Lead and Full-Stack Engineer based in Pune, India. Expert in Flutter, Android, and distributed systems.">
+    <meta name="keywords"
+        content="Kalpesh Shinde, Mobile Lead, Full-Stack Engineer, Flutter Developer, Android Developer, Pune, India, System Architect">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shindekalpesharun.github.io/">
+    <meta property="og:title" content="Kalpesh Shinde | Mobile Lead & Full-Stack Engineer">
+    <meta property="og:description"
+        content="3+ years experience architecting high-performance cross-platform apps and distributed backend systems.">
+    <meta property="og:image" content="https://shindekalpesharun.github.io/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://shindekalpesharun.github.io/">
+    <meta property="twitter:title" content="Kalpesh Shinde | Mobile Lead & Full-Stack Engineer">
+    <meta property="twitter:description"
+        content="3+ years experience architecting high-performance cross-platform apps and distributed backend systems.">
+    <meta property="twitter:image" content="https://shindekalpesharun.github.io/og-image.jpg">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio - shindekalpesharun</title>
 </head>
 
-<body>
-    <div class="container">
-        <div class="introduction">
-            <div class="navbar">
-                <a href="/" class="title">
-                    &lt;shindekalpesharun&gt
-                </a>
-                <div class="nav-action"><a href="mailto: shindekalpesharun@gmail.com" class="say-hello">
-                        Say hello</a>
-                    <i id="btn_dark_mode" class="fa-regular fa-moon"></i>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="profile-details">
-                    <span>Hi! My name is</span>
-                    <span class="name">Kalpesh Shinde</span>
-                    <div class="description">I'm a <span class="bold">Android Developer</span></div>
-                    <a href="https://drive.google.com/file/d/1tbcS8S26ivK55MT3a9U1UmuopUwk_sE9/view?usp=sharing"
-                        class="btn-resume" target="_blank">Resume</a>
-                </div>
-                <img class="profile-image" src="./images/profile.png" alt="">
-            </div>
-            <div class="find-me-on">
-                <hr class="line">
-                <div class="social-media">
-                    <a href="https://www.github.com/shindekalpesharun" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://medium.com/@shindekalpesharun" target="_blank"><i
-                            class="fa-brands fa-medium"></i></a>
-                    <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto: shindekalpesharun@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <hr class="line">
+<body data-theme="dark">
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">shindekalpesharun</div>
+
+            <div class="nav-actions">
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#about" aria-label="About section">About</a></li>
+                    <li><a href="#experience" aria-label="Experience section">Experience</a></li>
+                    <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+                    <li><a href="#education" aria-label="Education section">Education</a></li>
+                    <li><a href="#skills" aria-label="Skills terminal">Skills</a></li>
+                    <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+                </ul>
+
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
+    </nav>
 
-        <!-- about -->
-        <section class="about-me">
-            <h2 class="title">about</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td colspan="4">
-                        <h1>Get to know me better</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="about-profile"><img class="about-image" src="./images/profile.png" alt="">
-                            <p><b>Shinde Kalpesh</b></p>
-                        </div>
-                    </td>
-                    <td colspan="3">Android Developer</td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-
-                        <p>I am a skilled Android and Flutter developer with a background in Information Technology.
-                            With a Bachelor's degree from RMD Sinhgad College of Engineering and prior experience in
-                            enterprise-level Android app development, I bring expertise in Java, Kotlin, and Flutter. I
-                            am adept at converting design concepts into functional code and have a keen eye for UI/UX
-                            design. My portfolio includes projects like VOCOxS Guard App, where I implemented face
-                            detection for security attendance, and Prime Learning, an educational platform for
-                            elementary students. Committed to continuous learning, I have certifications in Flutter
-                            Development and Full Stack MERN Bootcamp.</p>
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <!-- technologies -->
-        <section class="technologies">
-            <h2 class="title">Technologies</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td>
-                        <h1>Check out what I'm good at.</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="skills">
-                            <div class="item"><img src="https://img.icons8.com/nolan/1080/java-coffee-cup-logo.png"
-                                    alt="java-coffee-cup-logo" />
-                                <span>Java</span>
-                            </div>
-                            <div class="item"><img
-                                    src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/1080/external-kotlin-a-cross-platform-statically-typed-general-purpose-programming-language-with-type-inference-logo-shadow-tal-revivo.png"
-                                    alt="external-kotlin-a-cross-platform-statically-typed-general-purpose-programming-language-with-type-inference-logo-shadow-tal-revivo" />
-
-                                <span>Kotlin</span>
-                            </div>
-                            <div class="item"><img class="skill-icon"
-                                    src="https://img.icons8.com/3d-fluency/1080/android-os.png" alt="android-os" />
-                                <span>Android</span>
-                            </div>
-                            <div class="item"><img
-                                    src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/1080/external-flutter-is-an-open-source-mobile-application-development-framework-created-by-google-logo-filled-tal-revivo.png"
-                                    alt="external-flutter-is-an-open-source-mobile-application-development-framework-created-by-google-logo-filled-tal-revivo" />
-                                <span>Flutter</span>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-            </table>
-        </section>
-
-        <!-- Projects -->
-        <section class="projects">
-            <h2 class="title">Projects</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td>
-                        <h1>Take a look at whats I've been working on</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <!-- <img src="./images/Shapes.svg" alt=""> -->
-                        <!-- <div style="width:100%;height:300px;padding-bottom:56%;position:relative;object-fit: cover;">
-                            <iframe src="https://giphy.com/embed/fmkYSBlJt3XjNF6p9c" width="100%" height="100%"
-                                style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                        </div> -->
-                        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe
-                                src="https://giphy.com/embed/ZVik7pBtu9dNS" width="100%" height="100%"
-                                style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                        </div>
-                        <!-- <img class="project-image"
-                            src="https://repository-images.githubusercontent.com/519879900/0978b619-e9a4-49e7-b2dc-c5383636ad9d"
-                            alt=""> -->
-                    </td>
-                </tr>
-
-            </table>
-        </section>
-
-        <!-- project - 1 -->
-        <section class="project-item">
-            <h2 class="title">01.</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td>
-                        <div class="project-title">
-                            <h1>VOCOxS - Guard App
-                                <!-- <i class="fa-solid fa-link"></i> -->
-                            </h1>
-                            <!-- <div class="project-action">
-                                <a href="" class="say-hello">
-                                    Visit</a>
-                                <a href="" class="btn-resume">Code</a>
-                            </div> -->
-
-
-                        </div>
-                        <span>Android, Kotlin, Jetpack Compose, M3, MVVM, RestAPI,
-                            ROOM, Hlit(DI)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="project-screenshot">
-                        <img src="https://img.icons8.com/ios/1080/no-image.png" alt="no-image" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Created a guard app facilitating security attendance through face detection, featuring
-                                role-
-                                based login with supervisor privileges for bulk attendance, complaint management, and
-                                guard
-                                grievances. Efficiently manages guard data through internal storage and synchronized
-                                REST
-                                API integration.</li>
-                            <li>Crafted an Android developer resume featuring comprehensive expertise in app
-                                development,
-                                proficiency in Java/Kotlin, UI/UX design, and robust problem-solving skills for optimal
-                                project execution.</li>
-                        </ul>
-                    </td>
-                </tr>
-
-            </table>
-        </section>
-
-        <!-- project - 2 -->
-        <section class="project-item">
-            <h2 class="title">02.</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td>
-                        <div class="project-title">
-                            <h1>VOCOxS - Security Agency App
-                                <!-- <i class="fa-solid fa-link"></i> -->
-                            </h1>
-                            <!-- <div class="project-action">
-                                <a href="" class="say-hello">
-                                    Visit</a>
-                                <a href="" class="btn-resume">Code</a>
-                            </div> -->
-
-
-                        </div>
-                        <span>Android, Java, Retrofit, M3, Google map</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="project-screenshot">
-                        <img src="https://img.icons8.com/ios/1080/no-image.png" alt="no-image" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Developed and maintained for providing security for multiple campuses, office.</li>
-                            <li>Management with agency, branches, campus, licences like other activity related security
-                                provides.</li>
-                        </ul>
-                    </td>
-                </tr>
-
-            </table>
-        </section>
-
-        <!-- project - 3 -->
-        <section class="project-item">
-            <h2 class="title">03.</h2>
-            <table class="bordered-table">
-                <tr>
-                    <td>
-                        <div class="project-title">
-                            <h1>Prime Learning
-                                <!-- <a href="https://play.google.com/store/apps/details?id=com.primelearn.android&hl=en&gl=US&pli=1"
-                                    target="_blank"><i class="fa-solid fa-link"></i></a> -->
-                            </h1>
-                            <div class="project-action">
-                                <a href="https://play.google.com/store/apps/details?id=com.primelearn.android&hl=en&gl=US&pli=1"
-                                    class="say-hello" target="_blank">
-                                    Visit</a>
-                                <!-- <a href="" class="btn-resume">Code</a> -->
-                            </div>
-
-
-                        </div>
-                        <span>Flutter</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="project-screenshot-grid">
-                        <img src="https://play-lh.googleusercontent.com/Ny0UIKsnbx6joLiqDmkypcN61IhVKhUDLqpYT5Yor28tBljbbbOthJIwXQx3ud0U-qIa=w2560-h1440-rw"
-                            alt="">
-                        <img src="https://play-lh.googleusercontent.com/8Op9pDehek86P6Dnc5nN2Znqy1qZAJIussZwt0BxWrYoAjk79lyWEol_7-B97Rv6XsU=w2560-h1440-rw"
-                            alt="">
-                        <img src="https://play-lh.googleusercontent.com/83vsnUUrXqpaNwVfCfWos4vs-PdSi2WcoInO7PD8cOSbbsN6d6bdsDlAtdMr2b0uAaY=w2560-h1440-rw"
-                            alt="">
-                        <img src="https://play-lh.googleusercontent.com/Gp-GyCl57ekvpfxm3PCl7dNHfmr4rtxM-WppqXicRQgedyE9lNUYT7x8OfDvocQWp5w=w2560-h1440-rw"
-                            alt="">
-                        <img src="https://play-lh.googleusercontent.com/QHANBrYrrDkzKQAHEmWSDFd3oUfYjeQxbJ1Ah23zfHj_PXJoU9gmIZEo2g_pjR-ydrU=w2560-h1440-rw"
-                            alt="">
-                        <img src="https://play-lh.googleusercontent.com/mIm-aiDkxnHP8I5EQaEC1dgsVMb-U_MBJHosxRXWXA0-ekPpLk8Nj5SaD5oyeMf7MZ0=w2560-h1440-rw"
-                            alt="">
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Developed and maintained multiple Android applications, including 3CDPrime, an educa-
-                                tional platform for elementary students in grades 1 to 5.</li>
-                            <li>Designed and implemented application architecture using Flutter, integrated with RESTful
-                                APIs for data retrieval and storage, and managed code repositories using Git.</li>
-                            <li>Collaborated with cross-functional teams to ensure timely delivery.</li>
-                        </ul>
-                    </td>
-                </tr>
-
-            </table>
-        </section>
-
-        <!-- contact -->
-        <!-- <section class="contact">
-            <div class="contact-text">
-                <h2>Contact</h2>
-                <span>Let's create someting great together</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+            <div class="container hero-content">
+                <div class="reveal">
+                    <p class="mono accent">Hi, my name is</p>
+                    <h1>Kalpesh Shinde.</h1>
+                    <div class="title"><span id="typewriter"></span><span class="cursor">|</span></div>
+                    <p class="subtitle">
+                        Results-driven Mobile Application Developer with 3+ years of experience architecting and
+                        deploying high-performance Android, iOS, and cross-platform applications. Proven expertise in
+                        leading development teams and integrating AI/ML, IoT, and cloud-based distributed systems.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/shindekalpesharun" target="_blank" class="social-btn">
+                            <span class="mono">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank" class="social-btn">
+                            <span class="mono">LinkedIn</span>
+                        </a>
+                        <a href="https://medium.com/@shindekalpesharun" target="_blank" class="social-btn">
+                            <span class="mono">Medium</span>
+                        </a>
+                        <a href="mailto:shindekalpesharun@gmail.com" class="social-btn">
+                            <span class="mono">Email</span>
+                        </a>
+                        <a href="tel:+919595727320" class="social-btn">
+                            <span class="mono">+91 9595727320</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="contact-form">
-                contact form
-            </div>
-        </section> -->
+        </section>
 
-        <!-- footer -->
-        <footer>
-            <div class="copyright">Copyright &copy;</div> <span id="currentYear"></span> <img class="footer-rocket"
-                src="https://img.icons8.com/plasticine/1080/rocket.png" alt="rocket" /> <b>shindekalpesharun</b>
-        </footer>
-    </div>
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title reveal">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">May 2024 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Android Lead Developer</h3>
+                            <div class="company mono">Ai Unika Technologies, Pune</div>
+                            <p>
+                                Led a cross-functional team of 5 to publish 5+ major mobile products (Rasta AI,
+                                Construction360, etc.). Spearheaded architectural migration to BLoC, improving
+                                performance by 40%. Engineered complex camera integrations (Ricoh Theta 360°, GoPro) and
+                                architected distributed Python/FastAPI backend handling 10,000+ daily images.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">Sept 2023 - Mar 2024</div>
+                        <div class="timeline-content">
+                            <h3>Android Developer</h3>
+                            <div class="company mono">MISCOS Technologies, Pune</div>
+                            <p>
+                                Architected modular Kotlin components using Hilt DI, reducing memory footprint by 30%.
+                                Implemented MVVM Clean Architecture with Room Database and integrated Google Maps SDK.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">May 2022</div>
+                        <div class="timeline-content">
+                            <h3>Flutter Developer Intern</h3>
+                            <div class="company mono">Shell Code, Remote</div>
+                            <p>
+                                Developed cross-platform apps with Firebase integration and optimized app bundle size by
+                                20% through code splitting.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">Nov 2020 - Jan 2021</div>
+                        <div class="timeline-content">
+                            <h3>Android Developer Intern</h3>
+                            <div class="company mono">Profcyma Career Solutions, Pune</div>
+                            <p>
+                                Engineered responsive Flutter UIs and integrated RESTful APIs, camera functionality, and
+                                geolocation services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">May 2019</div>
+                        <div class="timeline-content">
+                            <h3>Software/Hardware Engineer Intern</h3>
+                            <div class="company mono">Rising Innoveters, Sangli</div>
+                            <p>
+                                Engineered IoT-based smart ID card system using Python, Raspberry Pi, and OpenCV for
+                                real-time face detection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title reveal">Key Projects</h2>
+
+                <div class="filter-container reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Flutter">Flutter</button>
+                    <button class="filter-btn" data-filter="Python">Python</button>
+                    <button class="filter-btn" data-filter="Node.js">Node.js</button>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card reveal" data-tags="Node.js,Next.js,Prisma,Redis,PostgreSQL">
+                        <h3 class="accent">Skilmex</h3>
+                        <p>Full-Stack Educational Ecosystem handling 1,000+ concurrent users, reducing API response
+                            times to 200ms with Redis caching.</p>
+                        <div class="tag-list">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Prisma</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-tags="Flutter,Python,FastAPI,AWS,YOLO">
+                        <h3 class="accent">Rasta AI</h3>
+                        <p>AI-powered road monitoring system with real-time GPS tracking and YOLO-based hazard
+                            detection.</p>
+                        <div class="tag-list">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">OpenCV</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-tags="Android,Kotlin,Jetpack Compose,Hilt">
+                        <h3 class="accent">VOCOxS</h3>
+                        <p>Enterprise-grade security management system with Jetpack Compose, Hilt, and offline-first
+                            Room database.</p>
+                        <div class="tag-list">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Compose</span>
+                            <span class="tag">Hilt</span>
+                            <span class="tag">Room</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-tags="Flutter,Firebase">
+                        <h3 class="accent">Prime Learning</h3>
+                        <p>Educational app with 100,000+ downloads on Play Store. Features real-time Firebase sync and
+                            multi-grade content.</p>
+                        <div class="tag-list">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Contributions / Developer Tools -->
+        <section id="contributions">
+            <div class="container">
+                <h2 class="section-title reveal">Open Source Contributions</h2>
+                <div class="project-grid">
+                    <div class="project-card reveal">
+                        <h3 class="accent">easy_local_secure_storage</h3>
+                        <p>Developed and published a Flutter package extending <code>flutter_secure_storage</code> with
+                            reactive stream support for real-time synchronization, JSON handling, and automatic UI
+                            updates.</p>
+                        <div class="tag-list">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Reactive</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/shindekalpesharun" target="_blank" class="icon-link"
+                                aria-label="GitHub Repository">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://shindekalpesharun.medium.com/easy-local-secure-storage-flutters-simplest-secure-storage-now-reactive-5375784f4cda"
+                                target="_blank" class="icon-link" aria-label="Medium Article">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <h3 class="accent">local_database_visual_debugger</h3>
+                        <p>Created an open-source developer tool for real-time visual inspection and debugging of local
+                            databases; published a technical article on Medium with 500+ reads.</p>
+                        <div class="tag-list">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">DevTools</span>
+                            <span class="tag">Debugging</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/shindekalpesharun" target="_blank" class="icon-link"
+                                aria-label="GitHub Repository">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://medium.com/@shindekalpesharun" target="_blank" class="icon-link"
+                                aria-label="Medium Article">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title reveal">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2020 – 2023</div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Technology in IT</h3>
+                            <div class="company mono">RMD Sinhgad College of Engineering, Pune</div>
+                            <p>CGPA: 8.1/10</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2018 – 2020</div>
+                        <div class="timeline-content">
+                            <h3>Diploma in Computer Engineering</h3>
+                            <div class="company mono">Adarsh Institute of Technology Polytechnic, Sangli</div>
+                            <p>Percentage: 83%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title reveal">Technical Arsenal</h2>
+                <div class="terminal-window reveal" id="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="terminal-title">kalpesh -- zsh</div>
+                    </div>
+                    <div class="terminal-body mono">
+                        <div id="terminal-content">
+                            <div class="terminal-line">
+                                <span class="prompt">guest@kalpesh:~$</span>
+                                <span id="terminal-input"></span>
+                                <span class="cursor">_</span>
+                            </div>
+                            <div id="terminal-output"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <h2 class="section-title">Connect With Me</h2>
+                    <p class="subtitle">I'm currently looking for new opportunities and collaborations. Feel free to
+                        reach out through any of these platforms!</p>
+
+                    <div class="social-links" style="justify-content: center; margin-top: 2rem;">
+                        <a href="https://github.com/shindekalpesharun" target="_blank" class="social-btn">
+                            <span class="mono">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank" class="social-btn">
+                            <span class="mono">LinkedIn</span>
+                        </a>
+                        <a href="https://medium.com/@shindekalpesharun" target="_blank" class="social-btn">
+                            <span class="mono">Medium</span>
+                        </a>
+                        <a href="mailto:shindekalpesharun@gmail.com" class="social-btn">
+                            <span class="mono">Email</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-info mono"
+                        style="text-align: center; margin-top: 3rem; color: var(--text-secondary);">
+                        <p>Pune, Maharashtra, India</p>
+                        <p>+91 9595727320</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="mono">&copy; 2026 Built with &hearts; by Kalpesh Shinde</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
