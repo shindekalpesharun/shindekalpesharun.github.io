@@ -1,402 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalpesh Shinde | Mobile Lead & Full-Stack Engineer</title>
-
-    <!-- SEO & Metadata -->
-    <meta name="description"
-        content="Portfolio of Kalpesh Shinde, a Mobile Lead and Full-Stack Engineer based in Pune, India. Expert in Flutter, Android, and distributed systems.">
-    <meta name="keywords"
-        content="Kalpesh Shinde, Mobile Lead, Full-Stack Engineer, Flutter Developer, Android Developer, Pune, India, System Architect">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shindekalpesharun.github.io/">
-    <meta property="og:title" content="Kalpesh Shinde | Mobile Lead & Full-Stack Engineer">
-    <meta property="og:description"
-        content="3+ years experience architecting high-performance cross-platform apps and distributed backend systems.">
-    <meta property="og:image" content="https://shindekalpesharun.github.io/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://shindekalpesharun.github.io/">
-    <meta property="twitter:title" content="Kalpesh Shinde | Mobile Lead & Full-Stack Engineer">
-    <meta property="twitter:description"
-        content="3+ years experience architecting high-performance cross-platform apps and distributed backend systems.">
-    <meta property="twitter:image" content="https://shindekalpesharun.github.io/og-image.jpg">
-
+    <meta name="description" content="Portfolio of Kalpesh Shinde, a Mobile Lead and Full-Stack Engineer based in Pune, India. Expert in Flutter, Android, and distributed systems.">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-<body data-theme="dark">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
 
-    <nav id="navbar">
-        <div class="container nav-content">
-            <div class="logo">shindekalpesharun</div>
-
-            <div class="nav-actions">
-                <ul class="nav-links" id="nav-menu">
-                    <li><a href="#about" aria-label="About section">About</a></li>
-                    <li><a href="#experience" aria-label="Experience section">Experience</a></li>
-                    <li><a href="#projects" aria-label="Projects section">Projects</a></li>
-                    <li><a href="#education" aria-label="Education section">Education</a></li>
-                    <li><a href="#skills" aria-label="Skills terminal">Skills</a></li>
-                    <li><a href="#contact" aria-label="Contact section">Contact</a></li>
-                </ul>
-
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-                    <!-- Sun Icon -->
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-                    </svg>
-                    <!-- Moon Icon -->
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </button>
-
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <!-- Navigation -->
+    <nav class="glass">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <main>
+    <main class="container">
         <!-- Hero Section -->
-        <section id="about" class="hero">
-            <div class="container hero-content">
-                <div class="reveal">
-                    <p class="mono accent">Hi, my name is</p>
-                    <h1>Kalpesh Shinde.</h1>
-                    <div class="title"><span id="typewriter"></span><span class="cursor">|</span></div>
-                    <p class="subtitle">
-                        Results-driven Mobile Application Developer with 3+ years of experience architecting and
-                        deploying high-performance Android, iOS, and cross-platform applications. Proven expertise in
-                        leading development teams and integrating AI/ML, IoT, and cloud-based distributed systems.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://github.com/shindekalpesharun" target="_blank" class="social-btn">
-                            <span class="mono">GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank" class="social-btn">
-                            <span class="mono">LinkedIn</span>
-                        </a>
-                        <a href="https://medium.com/@shindekalpesharun" target="_blank" class="social-btn">
-                            <span class="mono">Medium</span>
-                        </a>
-                        <a href="mailto:shindekalpesharun@gmail.com" class="social-btn">
-                            <span class="mono">Email</span>
-                        </a>
-                        <a href="tel:+919595727320" class="social-btn">
-                            <span class="mono">+91 9595727320</span>
-                        </a>
+        <section id="home" class="hero">
+            <h1 class="reveal"><span class="gradient-text">Kalpesh Shinde.</span></h1>
+            <p class="reveal">Architecting high-performance mobile experiences & distributed systems. Currently Lead Android Developer @ Ai Unika.</p>
+            <a href="#work" class="cta-button reveal">View My Work</a>
+        </section>
+
+        <!-- Bento Grid Section -->
+        <section id="work" class="bento-grid">
+            <!-- About Me Box -->
+            <div class="bento-item bento-1 glass reveal">
+                <span class="section-label">About Me</span>
+                <h2>Lead Developer with a passion for <span class="gradient-text">clean architecture</span> and performance.</h2>
+                <p style="margin-top: 1.5rem; color: var(--text-muted);">3+ years experience in Android, iOS, and Flutter. Published 10+ apps and led cross-functional teams to deliver enterprise-grade solutions.</p>
+                
+                <div class="skills-container" style="margin-top: 2rem;">
+                    <div class="skill-pill">Flutter</div>
+                    <div class="skill-pill">Android</div>
+                    <div class="skill-pill">Kotlin</div>
+                    <div class="skill-pill">Node.js</div>
+                    <div class="skill-pill">FastAPI</div>
+                    <div class="skill-pill">AWS</div>
+                </div>
+            </div>
+
+            <!-- Experience Box -->
+            <div class="bento-item bento-2 glass reveal">
+                <span class="section-label">Experience</span>
+                <div class="experience-list">
+                    <div class="exp-item">
+                        <div class="exp-info">
+                            <h4>Android Lead Developer</h4>
+                            <div class="exp-company">Ai Unika Technologies, Pune</div>
+                        </div>
+                        <div class="exp-date">May 2024 - Present</div>
                     </div>
+                    <div class="exp-item">
+                        <div class="exp-info">
+                            <h4>Android Developer</h4>
+                            <div class="exp-company">MISCOS Technologies, Pune</div>
+                        </div>
+                        <div class="exp-date">2023 - 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Project 1 -->
+            <div class="bento-item bento-3 glass project-card reveal">
+                <span class="section-label">Featured Project</span>
+                <h3>Skilmex</h3>
+                <p>Full-Stack Educational Ecosystem handling 1,000+ concurrent users.</p>
+                <div class="project-tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Redis</span>
+                </div>
+            </div>
+
+            <!-- Featured Project 2 -->
+            <div class="bento-item bento-4 glass project-card reveal">
+                <span class="section-label">AI & Vision</span>
+                <h3>Rasta AI</h3>
+                <p>Real-time road monitoring with YOLO hazard detection.</p>
+                <div class="project-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">YOLO</span>
+                </div>
+            </div>
+
+            <!-- Open Source / Tools -->
+            <div class="bento-item bento-5 glass reveal">
+                <span class="section-label">Open Source</span>
+                <h3>Published Packages</h3>
+                <ul style="list-style: none; margin-top: 1rem; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-cube" style="margin-right: 0.5rem;"></i> easy_local_secure_storage</li>
+                    <li><i class="fa-solid fa-bug" style="margin-right: 0.5rem;"></i> local_database_visual_debugger</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- More Projects (Standard Grid for remaining) -->
+        <section id="projects" style="padding-top: 0;">
+            <div class="experience-list" style="gap: 2rem;">
+                <div class="glass reveal" style="padding: 2rem;">
+                    <span class="section-label">Enterprise</span>
+                    <h3>VOCOxS</h3>
+                    <p style="color: var(--text-muted);">Security management system with Jetpack Compose & Hilt.</p>
+                </div>
+                <div class="glass reveal" style="padding: 2rem;">
+                    <span class="section-label">EdTech</span>
+                    <h3>Prime Learning</h3>
+                    <p style="color: var(--text-muted);">100,000+ downloads on Play Store. Real-time Firebase sync.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience">
-            <div class="container">
-                <h2 class="section-title reveal">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">May 2024 - Present</div>
-                        <div class="timeline-content">
-                            <h3>Android Lead Developer</h3>
-                            <div class="company mono">Ai Unika Technologies, Pune</div>
-                            <p>
-                                Led a cross-functional team of 5 to publish 5+ major mobile products (Rasta AI,
-                                Construction360, etc.). Spearheaded architectural migration to BLoC, improving
-                                performance by 40%. Engineered complex camera integrations (Ricoh Theta 360°, GoPro) and
-                                architected distributed Python/FastAPI backend handling 10,000+ daily images.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">Sept 2023 - Mar 2024</div>
-                        <div class="timeline-content">
-                            <h3>Android Developer</h3>
-                            <div class="company mono">MISCOS Technologies, Pune</div>
-                            <p>
-                                Architected modular Kotlin components using Hilt DI, reducing memory footprint by 30%.
-                                Implemented MVVM Clean Architecture with Room Database and integrated Google Maps SDK.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">May 2022</div>
-                        <div class="timeline-content">
-                            <h3>Flutter Developer Intern</h3>
-                            <div class="company mono">Shell Code, Remote</div>
-                            <p>
-                                Developed cross-platform apps with Firebase integration and optimized app bundle size by
-                                20% through code splitting.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">Nov 2020 - Jan 2021</div>
-                        <div class="timeline-content">
-                            <h3>Android Developer Intern</h3>
-                            <div class="company mono">Profcyma Career Solutions, Pune</div>
-                            <p>
-                                Engineered responsive Flutter UIs and integrated RESTful APIs, camera functionality, and
-                                geolocation services.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">May 2019</div>
-                        <div class="timeline-content">
-                            <h3>Software/Hardware Engineer Intern</h3>
-                            <div class="company mono">Rising Innoveters, Sangli</div>
-                            <p>
-                                Engineered IoT-based smart ID card system using Python, Raspberry Pi, and OpenCV for
-                                real-time face detection.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Education & Contact Section -->
+        <section id="contact" class="footer">
+            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 2rem;">Let's <span class="gradient-text">Connect.</span></h2>
+            <div class="social-links reveal">
+                <a href="https://github.com/shindekalpesharun" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://medium.com/@shindekalpesharun" target="_blank"><i class="fa-brands fa-medium"></i></a>
+                <a href="mailto:shindekalpesharun@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
+            <p class="reveal" style="color: var(--text-muted);">© 2026 Kalpesh Shinde. Designed with precision.</p>
         </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title reveal">Key Projects</h2>
-
-                <div class="filter-container reveal">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="Flutter">Flutter</button>
-                    <button class="filter-btn" data-filter="Python">Python</button>
-                    <button class="filter-btn" data-filter="Node.js">Node.js</button>
-                </div>
-
-                <div class="project-grid">
-                    <div class="project-card reveal" data-tags="Node.js,Next.js,Prisma,Redis,PostgreSQL">
-                        <h3 class="accent">Skilmex</h3>
-                        <p>Full-Stack Educational Ecosystem handling 1,000+ concurrent users, reducing API response
-                            times to 200ms with Redis caching.</p>
-                        <div class="tag-list">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Prisma</span>
-                            <span class="tag">Redis</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal" data-tags="Flutter,Python,FastAPI,AWS,YOLO">
-                        <h3 class="accent">Rasta AI</h3>
-                        <p>AI-powered road monitoring system with real-time GPS tracking and YOLO-based hazard
-                            detection.</p>
-                        <div class="tag-list">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">OpenCV</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal" data-tags="Android,Kotlin,Jetpack Compose,Hilt">
-                        <h3 class="accent">VOCOxS</h3>
-                        <p>Enterprise-grade security management system with Jetpack Compose, Hilt, and offline-first
-                            Room database.</p>
-                        <div class="tag-list">
-                            <span class="tag">Kotlin</span>
-                            <span class="tag">Compose</span>
-                            <span class="tag">Hilt</span>
-                            <span class="tag">Room</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal" data-tags="Flutter,Firebase">
-                        <h3 class="accent">Prime Learning</h3>
-                        <p>Educational app with 100,000+ downloads on Play Store. Features real-time Firebase sync and
-                            multi-grade content.</p>
-                        <div class="tag-list">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">REST API</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Open Source Contributions / Developer Tools -->
-        <section id="contributions">
-            <div class="container">
-                <h2 class="section-title reveal">Open Source Contributions</h2>
-                <div class="project-grid">
-                    <div class="project-card reveal">
-                        <h3 class="accent">easy_local_secure_storage</h3>
-                        <p>Developed and published a Flutter package extending <code>flutter_secure_storage</code> with
-                            reactive stream support for real-time synchronization, JSON handling, and automatic UI
-                            updates.</p>
-                        <div class="tag-list">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Dart</span>
-                            <span class="tag">Security</span>
-                            <span class="tag">Reactive</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/shindekalpesharun" target="_blank" class="icon-link"
-                                aria-label="GitHub Repository">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="https://shindekalpesharun.medium.com/easy-local-secure-storage-flutters-simplest-secure-storage-now-reactive-5375784f4cda"
-                                target="_blank" class="icon-link" aria-label="Medium Article">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal">
-                        <h3 class="accent">local_database_visual_debugger</h3>
-                        <p>Created an open-source developer tool for real-time visual inspection and debugging of local
-                            databases; published a technical article on Medium with 500+ reads.</p>
-                        <div class="tag-list">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Dart</span>
-                            <span class="tag">DevTools</span>
-                            <span class="tag">Debugging</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://github.com/shindekalpesharun" target="_blank" class="icon-link"
-                                aria-label="GitHub Repository">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="https://medium.com/@shindekalpesharun" target="_blank" class="icon-link"
-                                aria-label="Medium Article">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.41-3.38 6.41s-3.38-2.87-3.38-6.41 1.51-6.41 3.38-6.41 3.38 2.87 3.38 6.41zM24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Education Section -->
-        <section id="education">
-            <div class="container">
-                <h2 class="section-title reveal">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">2020 – 2023</div>
-                        <div class="timeline-content">
-                            <h3>Bachelor of Technology in IT</h3>
-                            <div class="company mono">RMD Sinhgad College of Engineering, Pune</div>
-                            <p>CGPA: 8.1/10</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">2018 – 2020</div>
-                        <div class="timeline-content">
-                            <h3>Diploma in Computer Engineering</h3>
-                            <div class="company mono">Adarsh Institute of Technology Polytechnic, Sangli</div>
-                            <p>Percentage: 83%</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Terminal Skills Section -->
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title reveal">Technical Arsenal</h2>
-                <div class="terminal-window reveal" id="terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="terminal-title">kalpesh -- zsh</div>
-                    </div>
-                    <div class="terminal-body mono">
-                        <div id="terminal-content">
-                            <div class="terminal-line">
-                                <span class="prompt">guest@kalpesh:~$</span>
-                                <span id="terminal-input"></span>
-                                <span class="cursor">_</span>
-                            </div>
-                            <div id="terminal-output"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-card reveal">
-                    <h2 class="section-title">Connect With Me</h2>
-                    <p class="subtitle">I'm currently looking for new opportunities and collaborations. Feel free to
-                        reach out through any of these platforms!</p>
-
-                    <div class="social-links" style="justify-content: center; margin-top: 2rem;">
-                        <a href="https://github.com/shindekalpesharun" target="_blank" class="social-btn">
-                            <span class="mono">GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank" class="social-btn">
-                            <span class="mono">LinkedIn</span>
-                        </a>
-                        <a href="https://medium.com/@shindekalpesharun" target="_blank" class="social-btn">
-                            <span class="mono">Medium</span>
-                        </a>
-                        <a href="mailto:shindekalpesharun@gmail.com" class="social-btn">
-                            <span class="mono">Email</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-info mono"
-                        style="text-align: center; margin-top: 3rem; color: var(--text-secondary);">
-                        <p>Pune, Maharashtra, India</p>
-                        <p>+91 9595727320</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
-
-    <footer>
-        <div class="container">
-            <p class="mono">&copy; 2026 Built with &hearts; by Kalpesh Shinde</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
