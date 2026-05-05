@@ -1,175 +1,106 @@
 /**
  * Portfolio Interaction Logic
- * Synced with Resume Content
+ * "Nebula Glass" Theme
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeSwitcher();
-    initTypewriter();
-    init3DTilt();
-    initMobileNav();
     initRevealAnimations();
+    initBackgroundAnimation();
     initSmoothScroll();
-    initProjectFiltering();
-    initTerminalAnimation();
+    initMagneticButtons();
+    initCustomCursor();
 });
 
-// --- Theme Switcher ---
-function initThemeSwitcher() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    body.setAttribute('data-theme', savedTheme);
-    themeToggle.addEventListener('click', () => {
-        const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+// --- Custom Cursor ---
+function initCustomCursor() {
+    const cursor = document.querySelector('.custom-cursor');
+    const links = document.querySelectorAll('a, button, .glass, .skill-pill');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => cursor.classList.add('active'));
+        link.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });
 }
 
-// --- Typewriter Effect ---
-function initTypewriter() {
-    const typewriterElement = document.getElementById('typewriter');
-    const professions = [
-        "Mobile Lead Developer",
-        "Flutter & Android Expert",
-        "Full-Stack Engineer",
-        "System Architect"
-    ];
-    let profIndex = 0; let charIndex = 0; let isDeleting = false; let typeSpeed = 100;
-
-    function type() {
-        const currentText = professions[profIndex];
-        typewriterElement.textContent = isDeleting ? currentText.substring(0, charIndex - 1) : currentText.substring(0, charIndex + 1);
-        charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-        typeSpeed = isDeleting ? 50 : 100;
-
-        if (!isDeleting && charIndex === currentText.length) { isDeleting = true; typeSpeed = 2000; }
-        else if (isDeleting && charIndex === 0) { isDeleting = false; profIndex = (profIndex + 1) % professions.length; typeSpeed = 500; }
-        setTimeout(type, typeSpeed);
-    }
-    if (typewriterElement) type();
-}
-
-// --- 3D Tilt Effect ---
-function init3DTilt() {
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; const y = e.clientY - rect.top;
-            const centerX = rect.width / 2; const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 10; const rotateY = (centerX - x) / 10;
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-        });
-        card.addEventListener('mouseleave', () => card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`);
-    });
-}
-
-// --- Terminal Animation ---
-function initTerminalAnimation() {
-    const terminal = document.getElementById('terminal');
-    const input = document.getElementById('terminal-input');
-    const output = document.getElementById('terminal-output');
-    const command = "kalpesh --skills";
-    let hasRun = false;
-
-    const skillsData = {
-        "languages": ["TypeScript", "JavaScript", "Dart", "Kotlin", "Java", "Python", "Go"],
-        "mobile": ["Flutter", "Android (Jetpack Compose)", "iOS", "BLoC", "MVVM", "Clean Architecture", "Hilt DI"],
-        "backend": ["Node.js", "Express.js", "Next.js", "FastAPI", "Prisma ORM"],
-        "databases": ["PostgreSQL", "Redis", "Firebase", "MongoDB", "SQLite", "MySQL", "Room"],
-        "cloud_devops": ["AWS (EC2, S3)", "Docker", "Git", "GitHub Actions", "CI/CD", "Codemagic"],
-        "tools": ["Xcode", "Android Studio", "Firebase Crashlytics", "ExifTool", "REST APIs", "GraphQL"]
+// --- Smooth Reveal Animations ---
+function initRevealAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !hasRun) {
-            hasRun = true;
-            typeCommand();
-        }
-    }, { threshold: 0.5 });
-
-    if (terminal) observer.observe(terminal);
-
-    function typeCommand() {
-        let i = 0;
-        const interval = setInterval(() => {
-            input.textContent += command[i];
-            i++;
-            if (i === command.length) {
-                clearInterval(interval);
-                setTimeout(showOutput, 500);
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             }
-        }, 100);
-    }
-
-    function showOutput() {
-        const jsonStr = JSON.stringify(skillsData, null, 2);
-        let i = 0;
-        const interval = setInterval(() => {
-            let char = jsonStr[i];
-            if (char === '{' || char === '}' || char === '[' || char === ']') char = `<span class="json-bracket">${char}</span>`;
-            output.innerHTML += char;
-            i++;
-            if (i === jsonStr.length) clearInterval(interval);
-        }, 2);
-    }
-}
-
-// --- Utilities ---
-function initMobileNav() {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
         });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-}
+    }, observerOptions);
 
-function initRevealAnimations() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-function initSmoothScroll() {
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('navbar');
-        if (navbar) {
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        }
+// --- Background Blob Movement ---
+function initBackgroundAnimation() {
+    const blobs = document.querySelectorAll('.blob');
+    
+    document.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const xPercent = (clientX / window.innerWidth) - 0.5;
+        const yPercent = (clientY / window.innerHeight) - 0.5;
+
+        blobs.forEach((blob, index) => {
+            const speed = (index + 1) * 20;
+            const x = xPercent * speed;
+            const y = yPercent * speed;
+            blob.style.transform = `translate(${x}px, ${y}px)`;
+        });
     });
+}
+
+// --- Smooth Scrolling ---
+function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+            if (target) {
+                const offset = 100;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = target.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 }
 
-function initProjectFiltering() {
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.project-card');
+// --- Magnetic Button Effect ---
+function initMagneticButtons() {
+    const buttons = document.querySelectorAll('.cta-button, .social-links a, .glass');
+    
     buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.getAttribute('data-filter');
-            cards.forEach(card => {
-                const tags = card.getAttribute('data-tags');
-                if (tags) card.style.display = (filter === 'all' || tags.includes(filter)) ? 'flex' : 'none';
-            });
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = `translate(0px, 0px)`;
         });
     });
 }
