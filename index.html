@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Theme Ripple Overlay -->
   <div id="theme-ripple"></div>
 
@@ -18,9 +19,9 @@
   <nav id="navbar">
     <div class="nav-inner">
       <div class="nav-links">
-        <a href="#home" class="nav-link active" data-page="home">Home</a>
-        <a href="#projects" class="nav-link" data-page="projects">Projects</a>
-        <a href="#blog" class="nav-link" data-page="blog">Blog</a>
+        <a href="#home"     class="nav-link active" data-page="home">Home</a>
+        <a href="#projects" class="nav-link"        data-page="projects">Projects</a>
+        <a href="#blog"     class="nav-link"        data-page="blog">Blog</a>
       </div>
       <button id="theme-toggle" aria-label="Toggle theme">
         <span class="icon-sun">☀️</span>
@@ -29,156 +30,33 @@
     </div>
   </nav>
 
-  <!-- HOME PAGE -->
+  <!-- ═══════════════ HOME PAGE ═══════════════ -->
   <main id="page-home" class="page active">
     <div class="content-wrap">
 
-      <!-- Hero -->
-      <section class="hero-section">
-        <div class="kaizen-bg" aria-hidden="true">改善</div>
-        <div class="hero-profile">
-          <div class="avatar-wrap">
-            <img src="https://avatars.githubusercontent.com/u/shindekalpesharun" onerror="this.src='https://ui-avatars.com/api/?name=Kalpesh+Shinde&background=3b82f6&color=fff&size=120'" alt="Kalpesh Shinde" class="avatar" />
-          </div>
-          <div class="hero-info">
-            <h1>Kalpesh Shinde <span class="verified">✓</span></h1>
-            <p class="hero-sub mono">3+ yrs &nbsp;•&nbsp; Mobile Lead &nbsp;•&nbsp; Engineer &nbsp;•&nbsp; Builder</p>
-            <div class="social-icons">
-              <a href="mailto:shindekalpesharun@gmail.com" title="Email" class="social-btn">✉</a>
-              <a href="https://github.com/shindekalpesharun" target="_blank" title="GitHub" class="social-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/shindekalpesharun/" target="_blank" title="LinkedIn" class="social-btn">in</a>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" title="Medium" class="social-btn">M</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Hero: rendered by JS -->
+      <section class="hero-section"></section>
 
       <div class="divider-hatch"></div>
 
       <!-- About -->
       <section class="section">
         <h2 class="section-title">About</h2>
-        <p class="about-text mono">I architect high-performance mobile experiences and distributed systems. From Flutter and native Android to backend APIs and cloud infra, I focus on building software that's practical, reliable, and scalable for real users at real scale.</p>
+        <p class="about-text mono"></p>
       </section>
 
       <!-- Work Experience -->
       <section class="section">
         <h2 class="section-title">Work Experience</h2>
-        <div class="exp-list">
-
-          <div class="exp-item" id="exp-1">
-            <div class="exp-header" onclick="toggleExp('exp-1')">
-              <div class="exp-left">
-                <div class="exp-logo">AU</div>
-                <span class="mono exp-company-name">Ai Unika Technologies</span>
-                <span class="mono exp-role">/ Lead Android Developer</span>
-              </div>
-              <div class="exp-right">
-                <span class="mono exp-date">May 2024 – Jan 2026</span>
-                <span class="exp-chevron">⌄</span>
-              </div>
-            </div>
-            <div class="exp-body">
-              <ul>
-                <li>Leading Android development for enterprise-grade EdTech platform Skilmex.</li>
-                <li>Architecting scalable Flutter modules handling 1,000+ concurrent users.</li>
-                <li>Integrated Razorpay, Firebase, and custom DRM video streaming.</li>
-                <li>Mentoring junior developers and conducting code reviews.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-item" id="exp-2">
-            <div class="exp-header" onclick="toggleExp('exp-2')">
-              <div class="exp-left">
-                <div class="exp-logo">MC</div>
-                <span class="mono exp-company-name">MISCOS Technologies</span>
-                <span class="mono exp-role">/ Android Developer</span>
-              </div>
-              <div class="exp-right">
-                <span class="mono exp-date">Sept 2023 – Mar 2024</span>
-                <span class="exp-chevron">⌄</span>
-              </div>
-            </div>
-            <div class="exp-body">
-              <ul>
-                <li>Built VOCOxS security management system using Jetpack Compose and Hilt.</li>
-                <li>Developed real-time event-driven UI components for monitoring dashboards.</li>
-                <li>Improved app startup time by 40% through modularization.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
+        <div class="exp-list"></div>
       </section>
 
       <div class="divider-hatch"></div>
 
-      <!-- Projects -->
+      <!-- Projects (limited) -->
       <section class="section">
         <h2 class="section-title">Projects</h2>
-        <div class="project-list" id="project-list-home">
-
-          <div class="project-card">
-            <div class="project-thumb skilmex-thumb">
-              <div class="thumb-overlay"><span>Skilmex</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Skilmex</h3>
-                <div class="project-links">
-                  <a href="https://www.skilmex.com/" target="_blank" class="proj-link-btn">↗ Live</a>
-                  <a href="https://play.google.com/store/apps/details?id=com.skilmex.skilmex" target="_blank" class="proj-link-btn">▶ Android</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Full-stack EdTech ecosystem — Flutter app + Node.js backend handling 1,000+ concurrent users with Redis caching and real-time quiz engine.</p>
-              <div class="project-tags">
-                <span class="tag">Flutter</span><span class="tag">Node.js</span><span class="tag">Redis</span><span class="tag">Next.js</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb rasta-thumb">
-              <div class="thumb-overlay"><span>Rasta AI</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Rasta AI</h3>
-                <div class="project-links">
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">↗ Live</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Real-time road monitoring system with YOLO-based hazard detection. Flutter frontend + FastAPI backend with frame-by-frame video analysis.</p>
-              <div class="project-tags">
-                <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">YOLO</span><span class="tag">Python</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb prime-thumb">
-              <div class="thumb-overlay"><span>Prime Learning</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Prime Learning</h3>
-                <div class="project-links">
-                  <a href="https://play.google.com/store" target="_blank" class="proj-link-btn">↗ Live</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">EdTech Android app with 100,000+ Play Store downloads. Real-time Firebase sync, offline mode, and adaptive learning paths.</p>
-              <div class="project-tags">
-                <span class="tag">Android</span><span class="tag">Kotlin</span><span class="tag">Firebase</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <div class="project-list" id="project-list-home"></div>
         <div class="show-all-wrap">
           <button class="show-all-btn" onclick="goToProjects()">Show All Projects →</button>
         </div>
@@ -189,93 +67,22 @@
       <!-- Open Source -->
       <section class="section">
         <h2 class="section-title">Open Source Contributions</h2>
-        <div class="oss-list">
-          <div class="oss-item" id="oss-1">
-            <div class="oss-header" onclick="toggleOss('oss-1')">
-              <div class="oss-left">
-                <span class="oss-icon purple">⑂</span>
-                <span class="mono oss-repo">pub.dev/<strong>easy_local_secure_storage</strong></span>
-                <span class="mono oss-desc">Secure, encrypted key-value storage for Flutter</span>
-              </div>
-              <span class="exp-chevron">⌄</span>
-            </div>
-            <div class="oss-body mono">
-              Published Flutter package on pub.dev. Provides AES-encrypted local storage with a simple API, supporting both Android Keystore and iOS Secure Enclave for key management.
-            </div>
-          </div>
-          <div class="oss-item" id="oss-2">
-            <div class="oss-header" onclick="toggleOss('oss-2')">
-              <div class="oss-left">
-                <span class="oss-icon green">⑂</span>
-                <span class="mono oss-repo">pub.dev/<strong>local_database_visual_debugger</strong></span>
-                <span class="mono oss-desc">In-app visual debugger for local databases</span>
-              </div>
-              <span class="exp-chevron">⌄</span>
-            </div>
-            <div class="oss-body mono">
-              Flutter package providing an overlay UI to inspect, query, and time-travel through local databases (Hive, ObjectBox, Floor, Realm) without leaving the app. Release-mode safe.
-            </div>
-          </div>
-        </div>
+        <div class="oss-list"></div>
       </section>
 
       <!-- Skills -->
       <section class="section">
         <h2 class="section-title">Skills</h2>
-        <div class="skills-wrap">
-          <span class="skill-chip">Flutter</span>
-          <span class="skill-chip">Dart</span>
-          <span class="skill-chip">Android</span>
-          <span class="skill-chip">Kotlin</span>
-          <span class="skill-chip">Java</span>
-          <span class="skill-chip">Node.js</span>
-          <span class="skill-chip">FastAPI</span>
-          <span class="skill-chip">Python</span>
-          <span class="skill-chip">Next.js</span>
-          <span class="skill-chip">React</span>
-          <span class="skill-chip">Firebase</span>
-          <span class="skill-chip">AWS</span>
-          <span class="skill-chip">Redis</span>
-          <span class="skill-chip">PostgreSQL</span>
-          <span class="skill-chip">MongoDB</span>
-          <span class="skill-chip">Docker</span>
-          <span class="skill-chip">Jetpack Compose</span>
-          <span class="skill-chip">Hilt</span>
-        </div>
+        <div class="skills-wrap"></div>
       </section>
 
       <div class="divider-hatch"></div>
 
-      <!-- Blog Posts -->
+      <!-- Blog (limited) -->
       <section class="section">
         <h2 class="section-title">Blog</h2>
         <p class="section-sub mono">Engineering notes, architecture deep-dives, and lessons learned.</p>
-        <div class="blog-list">
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Building a Scalable EdTech Backend with Node.js and Redis</h3>
-              <p class="blog-excerpt mono">How we designed Skilmex's backend to handle 1,000+ concurrent quiz sessions using Redis pub/sub and horizontal scaling.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2025-10-12</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">YOLO on Mobile: Real-time Road Hazard Detection with Flutter + FastAPI</h3>
-              <p class="blog-excerpt mono">A walkthrough of streaming video frames from a Flutter app to a YOLO model served via FastAPI for sub-200ms inference.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2025-07-28</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Why I Publish Flutter Packages: Lessons from pub.dev</h3>
-              <p class="blog-excerpt mono">Open-source contributions taught me more about API design and backwards compatibility than any course.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2024-12-20</span>
-          </div>
-        </div>
+        <div class="blog-list" id="blog-list-home"></div>
         <div class="show-all-wrap">
           <button class="show-all-btn" onclick="goToBlog()">Show All Posts →</button>
         </div>
@@ -299,7 +106,6 @@
         </div>
       </section>
 
-      <!-- Footer -->
       <footer class="site-footer">
         <span class="mono">Designed & Developed by <strong>Kalpesh</strong> · © 2026. All rights reserved.</span>
         <span class="mono footer-right">Pune, India</span>
@@ -308,110 +114,13 @@
     </div>
   </main>
 
-  <!-- PROJECTS PAGE -->
+  <!-- ═══════════════ PROJECTS PAGE ═══════════════ -->
   <main id="page-projects" class="page">
     <div class="content-wrap">
       <section class="section">
         <h1 class="page-title">Projects</h1>
         <p class="section-sub mono">Things I've built — apps, tools, and systems.</p>
-        <div class="project-list">
-
-          <div class="project-card">
-            <div class="project-thumb skilmex-thumb">
-              <div class="thumb-overlay"><span>Skilmex</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Skilmex</h3>
-                <div class="project-links">
-                  <a href="https://www.skilmex.com/" target="_blank" class="proj-link-btn">↗ Live</a>
-                  <a href="https://play.google.com/store/apps/details?id=com.skilmex.skilmex" target="_blank" class="proj-link-btn">▶ Android</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Full-stack EdTech platform — Flutter app + Node.js backend with Redis caching, real-time quiz engine, Razorpay payments, and DRM video streaming.</p>
-              <div class="project-tags">
-                <span class="tag">Flutter</span><span class="tag">Node.js</span><span class="tag">Redis</span><span class="tag">Next.js</span><span class="tag">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb rasta-thumb">
-              <div class="thumb-overlay"><span>Rasta AI</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Rasta AI</h3>
-                <div class="project-links">
-                  <a href="#" class="proj-link-btn">↗ Live</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Real-time road hazard detection. Flutter streams frames to a FastAPI + YOLO backend for sub-200ms inference. Used for road safety monitoring.</p>
-              <div class="project-tags">
-                <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">YOLO</span><span class="tag">Python</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb prime-thumb">
-              <div class="thumb-overlay"><span>Prime Learning</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Prime Learning</h3>
-                <div class="project-links">
-                  <a href="https://play.google.com/store" target="_blank" class="proj-link-btn">↗ Live</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">EdTech Android app with 100,000+ Play Store downloads. Real-time Firebase sync, offline mode, and adaptive learning paths.</p>
-              <div class="project-tags">
-                <span class="tag">Android</span><span class="tag">Kotlin</span><span class="tag">Firebase</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb vocoxs-thumb">
-              <div class="thumb-overlay"><span>VOCOxS</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">VOCOxS</h3>
-                <div class="project-links">
-                  <a href="#" class="proj-link-btn">↗ Live</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Enterprise security management system for real-time monitoring and access control. Built with Jetpack Compose, Hilt DI, and event-driven architecture.</p>
-              <div class="project-tags">
-                <span class="tag">Android</span><span class="tag">Jetpack Compose</span><span class="tag">Hilt</span><span class="tag">Kotlin</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb debugger-thumb">
-              <div class="thumb-overlay"><span>DB Debugger</span></div>
-            </div>
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-name">Local DB Visual Debugger</h3>
-                <div class="project-links">
-                  <a href="https://pub.dev" target="_blank" class="proj-link-btn">↗ pub.dev</a>
-                  <a href="https://github.com/shindekalpesharun" target="_blank" class="proj-link-btn">⎇ GitHub</a>
-                </div>
-              </div>
-              <p class="project-desc mono">Flutter package: in-app overlay UI to inspect, query, and time-travel through local databases (Hive, ObjectBox, Floor, Realm). Release-mode safe.</p>
-              <div class="project-tags">
-                <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">pub.dev</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <div class="project-list" id="project-list-all"></div>
       </section>
       <footer class="site-footer">
         <span class="mono">Designed & Developed by <strong>Kalpesh</strong> · © 2026. All rights reserved.</span>
@@ -420,54 +129,13 @@
     </div>
   </main>
 
-  <!-- BLOG PAGE -->
+  <!-- ═══════════════ BLOG PAGE ═══════════════ -->
   <main id="page-blog" class="page">
     <div class="content-wrap">
       <section class="section">
         <h1 class="page-title">Blogs</h1>
         <p class="section-sub mono">Thoughts on mobile engineering, architecture, and more.</p>
-        <div class="blog-list full">
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Building a Scalable EdTech Backend with Node.js and Redis</h3>
-              <p class="blog-excerpt mono">How we designed Skilmex's backend to handle 1,000+ concurrent quiz sessions using Redis pub/sub and horizontal scaling strategies.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2025-10-12</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">YOLO on Mobile: Real-time Road Hazard Detection with Flutter + FastAPI</h3>
-              <p class="blog-excerpt mono">A walkthrough of streaming video frames from a Flutter app to a YOLO model served via FastAPI for sub-200ms inference.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2025-07-28</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Securing Flutter Apps: AES Encryption with Android Keystore</h3>
-              <p class="blog-excerpt mono">Deep dive into how easy_local_secure_storage leverages platform keystores to protect sensitive user data.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2025-04-15</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Jetpack Compose for Enterprise: Lessons from Building VOCOxS</h3>
-              <p class="blog-excerpt mono">How Compose's declarative model and Hilt DI enabled a 40% reduction in app startup time for a real-time security dashboard.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2024-11-03</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-left">
-              <h3 class="blog-title">Why I Publish Flutter Packages: Lessons from pub.dev</h3>
-              <p class="blog-excerpt mono">Open-source contributions taught me more about API design and backwards compatibility than any course ever could.</p>
-              <a href="https://medium.com/@shindekalpesharun" target="_blank" class="read-more mono">Read more →</a>
-            </div>
-            <span class="blog-date mono">2024-12-20</span>
-          </div>
-        </div>
+        <div class="blog-list" id="blog-list-all"></div>
       </section>
       <footer class="site-footer">
         <span class="mono">Designed & Developed by <strong>Kalpesh</strong> · © 2026. All rights reserved.</span>
@@ -476,6 +144,8 @@
     </div>
   </main>
 
+  <!-- Load data first, then the render engine -->
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
