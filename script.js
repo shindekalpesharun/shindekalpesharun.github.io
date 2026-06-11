@@ -1,106 +1,127 @@
-/**
- * Portfolio Interaction Logic
- * "Nebula Glass" Theme
- */
+// ===== THEME WITH RIPPLE ANIMATION =====
+const root = document.documentElement;
+const themeBtn = document.getElementById('theme-toggle');
+const rippleContainer = document.getElementById('theme-ripple');
+const saved = localStorage.getItem('theme') || 'dark';
+root.setAttribute('data-theme', saved);
 
-document.addEventListener('DOMContentLoaded', () => {
-    initRevealAnimations();
-    initBackgroundAnimation();
-    initSmoothScroll();
-    initMagneticButtons();
-    initCustomCursor();
+themeBtn.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  // Get button position for ripple origin
+  const rect = themeBtn.getBoundingClientRect();
+  const originX = rect.left + rect.width / 2;
+  const originY = rect.top + rect.height / 2;
+
+  // Calculate the max radius needed to cover the whole viewport
+  const maxDist = Math.hypot(
+    Math.max(originX, window.innerWidth - originX),
+    Math.max(originY, window.innerHeight - originY)
+  );
+  const diameter = maxDist * 2;
+
+  // Ripple color = the NEXT theme's background color
+  const rippleColor = next === 'dark' ? '#0a0a0a' : '#f2f2f2';
+
+  // Create ripple element
+  const circle = document.createElement('div');
+  circle.className = 'ripple-circle';
+  Object.assign(circle.style, {
+    width: diameter + 'px',
+    height: diameter + 'px',
+    left: (originX - maxDist) + 'px',
+    top: (originY - maxDist) + 'px',
+    background: rippleColor,
+  });
+
+  rippleContainer.appendChild(circle);
+
+  // Trigger animation on next frame
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      circle.classList.add('expanding');
+    });
+  });
+
+  // Icon spin
+  themeBtn.classList.remove('spinning');
+  void themeBtn.offsetWidth; // reflow to restart animation
+  themeBtn.classList.add('spinning');
+  themeBtn.addEventListener('animationend', () => themeBtn.classList.remove('spinning'), { once: true });
+
+  // Switch theme at midpoint of animation — freeze all transitions so
+  // colors snap instantly under the ripple (no blank-page flash on reveal)
+  setTimeout(() => {
+    document.body.classList.add('no-transition');
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    // Re-enable transitions after one paint frame
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.remove('no-transition');
+      });
+    });
+  }, 250);
+
+  // Remove ripple after animation ends
+  circle.addEventListener('animationend', () => {
+    circle.remove();
+  });
 });
 
-// --- Custom Cursor ---
-function initCustomCursor() {
-    const cursor = document.querySelector('.custom-cursor');
-    const links = document.querySelectorAll('a, button, .glass, .skill-pill');
+// ===== SPA NAVIGATION =====
+const pages = {
+  home: document.getElementById('page-home'),
+  projects: document.getElementById('page-projects'),
+  blog: document.getElementById('page-blog'),
+};
+const navLinks = document.querySelectorAll('.nav-link');
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => cursor.classList.add('active'));
-        link.addEventListener('mouseleave', () => cursor.classList.remove('active'));
-    });
+function showPage(name) {
+  Object.values(pages).forEach(p => p.classList.remove('active'));
+  navLinks.forEach(l => l.classList.remove('active'));
+  if (pages[name]) pages[name].classList.add('active');
+  const activeLink = document.querySelector(`.nav-link[data-page="${name}"]`);
+  if (activeLink) activeLink.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// --- Smooth Reveal Animations ---
-function initRevealAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const page = link.getAttribute('data-page');
+    showPage(page);
+    history.pushState({ page }, '', '#' + page);
+  });
+});
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+window.addEventListener('popstate', (e) => {
+  const page = e.state?.page || 'home';
+  showPage(page);
+});
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-}
+// Init from hash
+const initHash = location.hash.replace('#', '') || 'home';
+showPage(['home','projects','blog'].includes(initHash) ? initHash : 'home');
 
-// --- Background Blob Movement ---
-function initBackgroundAnimation() {
-    const blobs = document.querySelectorAll('.blob');
-    
-    document.addEventListener('mousemove', (e) => {
-        const { clientX, clientY } = e;
-        const xPercent = (clientX / window.innerWidth) - 0.5;
-        const yPercent = (clientY / window.innerHeight) - 0.5;
+// Global nav helpers for buttons
+window.goToProjects = () => { showPage('projects'); history.pushState({ page: 'projects' }, '', '#projects'); };
+window.goToBlog = () => { showPage('blog'); history.pushState({ page: 'blog' }, '', '#blog'); };
 
-        blobs.forEach((blob, index) => {
-            const speed = (index + 1) * 20;
-            const x = xPercent * speed;
-            const y = yPercent * speed;
-            blob.style.transform = `translate(${x}px, ${y}px)`;
-        });
-    });
-}
+// ===== ACCORDION: EXPERIENCE =====
+window.toggleExp = (id) => {
+  const item = document.getElementById(id);
+  if (!item) return;
+  item.classList.toggle('open');
+};
 
-// --- Smooth Scrolling ---
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 100;
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = target.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
+// Open first exp by default
+document.getElementById('exp-1')?.classList.add('open');
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-// --- Magnetic Button Effect ---
-function initMagneticButtons() {
-    const buttons = document.querySelectorAll('.cta-button, .social-links a, .glass');
-    
-    buttons.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            
-            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-        });
-
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = `translate(0px, 0px)`;
-        });
-    });
-}
+// ===== ACCORDION: OPEN SOURCE =====
+window.toggleOss = (id) => {
+  const item = document.getElementById(id);
+  if (!item) return;
+  item.classList.toggle('open');
+};
